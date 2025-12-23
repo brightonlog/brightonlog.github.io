@@ -1,0 +1,96 @@
+/* src/components/About/About.css */
+
+.about-section {
+  padding: 100px 20px; /* 위아래 여백을 넉넉하게 */
+  background-color: #ffffff;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto; /* 가운데 정렬 */
+  display: flex; /* 가로 배치 시작! */
+  align-items: center;
+  gap: 50px; /* 사진과 글 사이 간격 */
+}
+
+/* --- 왼쪽 사진 영역 --- */
+.about-image-wrapper {
+  flex: 1; /* 공간을 1만큼 차지 */
+  display: flex;
+  justify-content: center;
+}
+
+.placeholder-img {
+  width: 300px;
+  height: 300px;
+  background-color: #f0f0f0;
+  border-radius: 20px; /* 모서리 둥글게 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem; /* 이모지 크기 */
+  box-shadow: 10px 10px 0px #ff9eb5; /* 핑크색 그림자 포인트! */
+}
+
+/* --- 오른쪽 글 영역 --- */
+.about-text-wrapper {
+  flex: 1.5; /* 글씨 공간을 좀 더 넓게(1.5배) */
+}
+
+.section-title {
+  color: #7abaff; /* 로고의 하늘색 */
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.sub-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* 정보 그리드 (이름, 학교 등) */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 두 줄로 나누기 */
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.value {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 📱 모바일 화면 대응 (화면이 좁아지면 위아래로 쌓기) */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* 세로로 변경 */
+    text-align: center;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr; /* 한 줄로 변경 */
+  }
+}

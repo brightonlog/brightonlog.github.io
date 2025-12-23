@@ -1,0 +1,90 @@
+/* src/components/Header/Header.css */
+/* // 꾸미는 역할 */
+
+@keyframes spin-logo {
+  /* 0e도에서 시작해서 */
+  from {
+    transform: rotate(0deg);
+  }
+
+  /* 360도 한 바퀴 회전 */
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  /* 다른 내용보다 항상 위에 있게 배치 */
+  z-index: 1000;
+}
+
+/* 로고 스타일 */
+
+.logo-image {
+  height: 50px;
+  width: auto;
+
+  /* 10초 동안, linear(일정한 속도로), infinite(계속 돌릴 것임) */
+  animation: spin-logo 10s linear infinite;
+}
+
+/* 메뉴 스타일 */
+.nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
+  display: block; /* 블럭으로 만들어서 간격 침범 방지 */
+}
+
+.nav-links a:hover {
+  color: #7abaff; /* 로고 색이랑 비슷한 하늘색으로 포인트! */
+}
+
+/* --- 4. 언어 버튼 스타일 --- */
+.lang-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 버튼 사이 간격 */
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ccc; /* 선택 안 된 건 흐리게 */
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.lang-btn:hover {
+  color: #555;
+}
+
+/* 현재 선택된 언어 (진하게 표시) */
+.lang-btn.active {
+  color: #333;
+}
+
+.divider {
+  color: #eee;
+  font-size: 0.8rem;
+}

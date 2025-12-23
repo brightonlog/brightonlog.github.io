@@ -1,0 +1,90 @@
+/* src/components/Home/Home.css */
+
+/* src/components/Home/Home.css */
+
+.home-content {
+  display: flex;
+  flex-direction: column; /* ⭐ 이 줄이 있어야 버튼이 글씨 '밑'으로 내려가요! */
+  align-items: center; /* 가운데 정렬 */
+  justify-content: center;
+  max-width: 800px;
+}
+
+.home-container {
+  height: 100vh;
+  display: flex;
+  /* 가로 중앙 정렬  */
+  justify-content: center;
+  /* 세로 중앙 정렬 */
+  align-items: center;
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.greeting {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.title {
+  font-size: 3rem; /* 제목은 큼지막하게 */
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.4; /* 줄 간격 */
+  color: #333;
+}
+
+.highlight {
+  /* 강조하고 싶은 곳에 예쁜 그라이데이션을 입혀보자 */
+
+  background: linear-gradient(to right, #7abaff, #ff9eb5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* 버튼을 꾸며보자 */
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #333;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #555;
+  /* 마우스 올리면 살짝 위로 뜨는 기능 추가/ */
+  transform: translate(-3px);
+}
+
+.secondary-btn {
+  background-color: white;
+  color: #333;
+  border: 2px solid #333;
+}
+
+.secondary-btn:hover {
+  background-color: #333;
+  color: white;
+}
