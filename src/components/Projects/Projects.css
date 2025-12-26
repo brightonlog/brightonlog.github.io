@@ -1,0 +1,115 @@
+/* src/components/Projects/Projects.css */
+
+.projects-section {
+  padding: 100px 20px;
+  background-color: #ffffff; /* 흰색 배경 */
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-grid {
+  display: grid;
+  /* 카드가 화면 크기에 따라 자동으로 3개, 2개, 1개로 조절됨 */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+/* --- 카드 디자인 --- */
+.project-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.3s ease; /* 부드러운 움직임 */
+  display: flex;
+  flex-direction: column; /* 내용 위에서 아래로 쌓기 */
+  justify-content: space-between; /* 위아래 내용 벌리기 */
+  height: 100%; /* 높이 꽉 채우기 */
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* 위로 살짝 뜸 */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* 그림자 진하게 */
+  border-color: #7abaff; /* 테두리 하늘색으로 변경 */
+}
+
+.card-header {
+  margin-bottom: 15px;
+}
+
+.project-badge {
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.project-date {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.project-desc {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1; /* 설명이 짧아도 버튼을 맨 밑으로 밀어내기 위해 */
+}
+
+/* 기술 스택 태그들 */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.project-tech span {
+  background-color: #f0f0f0;
+  color: #555;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* 카드 하단 버튼 */
+.card-footer {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.card-btn {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  border: 2px solid #333;
+  padding: 8px 20px;
+  border-radius: 30px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.card-btn:hover {
+  background-color: #333;
+  color: white;
+}
+
+.coming-soon {
+  color: #999;
+  font-style: italic;
+}

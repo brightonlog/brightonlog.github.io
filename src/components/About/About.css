@@ -35,6 +35,7 @@
 /* --- 오른쪽 글 영역 --- */
 .about-text-wrapper {
   flex: 1.5; /* 글씨 공간을 좀 더 넓게(1.5배) */
+  word-break: keep-all;
 }
 
 .section-title {
@@ -50,6 +51,7 @@
   color: #333;
   margin-bottom: 20px;
   font-weight: 800;
+  word-break: keep-all;
 }
 
 .description {

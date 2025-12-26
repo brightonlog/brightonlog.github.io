@@ -14,6 +14,9 @@ import Home from "./components/Home/Home";
 // About import 하기
 import About from "./components/About/About";
 
+// Projects import 하기
+import Projects from "./components/Projects/Projects";
+
 // App 함수 컴포넌트 만들기. 이 함수 하나가 화면의 한 덩어리가 됨
 function App() {
   return (
@@ -22,6 +25,7 @@ function App() {
       <main>
         <Home />
         <About />
+          <Projects />
       </main>
     </div>
   );
